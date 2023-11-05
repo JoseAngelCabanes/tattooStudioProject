@@ -3,20 +3,20 @@ import { Appointment } from "../models/Appointment";
 
 const create = async (req: Request, res:Response, next: NextFunction) => {
     try{
-        const custumer_id = req.body.customer_id
-        const tattoo_artist_id = req.body.tattoo_artist_id
+        const client_id = req.body.client_id
+        const artist_id = req.body.tattoo_artist_id
         const date = req.body.date;
 
-        const newCustomer = await Appointment.create({
-            customer_id: custumer_id,
-            tattoo_artist_id: tattoo_artist_id,
+        const newClient = await Appointment.create({
+            client_id: client_id,
+            artist_id: artist_id,
             date: date
           }).save()
 
           return res.json({
             success: true,
             message: "Appoiment created succesfully",
-            token: newCustomer
+            token: newClient
           })
     }catch (error) {
         return res.status(500).json(
@@ -40,7 +40,7 @@ const updateAppointmentById = async(req: any, res: Response) => {
       const appointment = await Appointment.findOneBy(
         {
           id: parseInt(appoimentId),
-          customer_id: req.token.id
+          client_id: req.token.id
         }
       )
   
@@ -56,7 +56,7 @@ const updateAppointmentById = async(req: any, res: Response) => {
           id: parseInt(appoimentId)
         },
         {
-          tattoo_artist_id: tattoo_artist_id,
+          artist_id: artist_id,
           status: status,
           date: date
         }
@@ -79,7 +79,7 @@ const updateAppointmentById = async(req: any, res: Response) => {
   const deleteAppointmentByUserId = async (req: Request, res: Response) => {
     try {
       const appointmentToRemove = await Appointment.findOneBy({
-        customer_id: req.token.id,
+        client_id: req.token.id,
         id : req.body.id
       });
       if (appointmentToRemove) {

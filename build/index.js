@@ -8,7 +8,7 @@ const db_1 = require("./db");
 const app = (0, express_1.default)();
 app.use(express_1.default.json());
 const PORT = process.env.PORT || 3000;
-// app.use('/client', routerCustomers)
+// app.use('/client', routerClients)
 // app.use('/artist', routerTatoo_artists)
 // app.use('/appointment', routerAppointment)
 // app.use('/portfolio', routerPortfolio)
