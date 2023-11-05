@@ -4,7 +4,7 @@ import { Artist } from "../models/Artist";
 import bcrypt from "bcrypt";
 import { TokenDecoded } from "../../types";
 import { Appointment } from "../models/Appointment";
-import { Customer } from "../models/Client";
+import { Client } from "../models/Client";
 
 const register = async (req: Request, res:Response, next: NextFunction) => {
     try{
@@ -220,16 +220,16 @@ const update = async (req: Request, res: Response) => {
       return res.json(
         {
           success: false,
-          message: "users cant be retrieved",
+          message: "users can not be retrieved",
           error: error
         }
       )
     }
   }
 
-  const getAllCustomers = async (req: Request, res: Response) => {
+  const getAllClients = async (req: Request, res: Response) => {
     try {
-      const customers = await Customer.find(
+      const clients = await Client.find(
         {
           select: {
             id: true,
@@ -249,7 +249,7 @@ const update = async (req: Request, res: Response) => {
         {
           success: true,
           message: "users retrieved",
-          data: customers
+          data: clients
         }
       )
   
@@ -257,7 +257,7 @@ const update = async (req: Request, res: Response) => {
       return res.json(
         {
           success: false,
-          message: "users cant be retrieved",
+          message: "users can not be retrieved",
           error: error
         }
       )
@@ -269,7 +269,7 @@ const update = async (req: Request, res: Response) => {
   
       const {role, is_active} = req.body
   
-      const updateTattoo_artist = await Tattoo_artist.update(
+      const updateArtist = await Artist.update(
         {
           id: req.body.id
         },
@@ -282,23 +282,23 @@ const update = async (req: Request, res: Response) => {
       return res.json({
         success: true,
         message: "User updated",
-        data: updateTattoo_artist
+        data: updateArtist
       })
     } catch (error) {
       return res.json({
         success: false,
-        message: "User information cant by updated",
+        message: "User information can not be updated",
         error: error
       })
     }
   }
 
-  const updateAdminCustomers = async (req: Request, res: Response) => {
+  const updateAdminClients = async (req: Request, res: Response) => {
     try{
   
       const {is_active} = req.body
   
-      const updateCustomer = await Customer.update(
+      const updateClient = await Client.update(
         {
           id: req.body.id
         },
@@ -310,7 +310,7 @@ const update = async (req: Request, res: Response) => {
       return res.json({
         success: true,
         message: "User updated",
-        data: updateCustomer
+        data: updateClient
       })
     } catch (error) {
       return res.json({
@@ -321,4 +321,4 @@ const update = async (req: Request, res: Response) => {
     }
   }
 
-export { register, login, profile, update, getAllAppointmentByTattooArtistId, getAllTattooArtist, getAllCustomers, updateAdmin, updateAdminCustomers }
+export { register, login, profile, update, getAllAppointmentByArtistId, getAllArtist, getAllClients, updateAdmin, updateAdminClients }
