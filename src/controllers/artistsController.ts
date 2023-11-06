@@ -70,7 +70,7 @@ const login = async (req: Request, res: Response) => {
         role: user.role,
         email: user.email,
       },
-      "secreto",
+      "tatuatge",
       {
         expiresIn: "3h",
       }

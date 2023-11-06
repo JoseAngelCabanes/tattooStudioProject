@@ -17,7 +17,7 @@ const auth = (req: any, res: Response, next: NextFunction) => {
       });
     }
 
-    const tokenDecoded = jwt.verify(token, "secreto");
+    const tokenDecoded = jwt.verify(token, "tatuatge");
 
     req.token = tokenDecoded;
 
