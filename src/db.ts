@@ -6,9 +6,11 @@ import { Artist } from "./models/Artist";
 import { Appointment } from "./models/Appointment";
 import { CreateTableClients1698340010072 } from "./migration/1698340010072-create-table-clients";
 import { CreateTableArtists1698391288374 } from "./migration/1698391288374-create-table-artists";
-import { CreateTableAppoiments1698391359737 } from "./migration/1698391359737-create-table-appoiments";
+import { CreateTableAppointments1698391359737 } from "./migration/1698391359737-create-table-appointments";
 import { CreateTablePortfolios1698392187453 } from "./migration/1698392187453-create-table-portfolios";
-require('dotenv').config();
+import dotenv from 'dotenv';
+dotenv.config();
+
 
 type database = "mysql";
 
@@ -23,7 +25,7 @@ export const AppDataSource = new DataSource({
   migrations: [
     CreateTableClients1698340010072,
     CreateTableArtists1698391288374,
-    CreateTableAppoiments1698391359737,
+    CreateTableAppointments1698391359737,
     CreateTablePortfolios1698392187453,
   ],
   synchronize: false,

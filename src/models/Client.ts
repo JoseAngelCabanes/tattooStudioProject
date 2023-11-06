@@ -37,5 +37,5 @@ export class Client extends BaseEntity {
   updated_at!: Date;
 
   @OneToMany(() => Appointment, (appointment) => appointment.client)
-  appoiments!: Appointment[];
+  appointments!: Appointment[];
 }
