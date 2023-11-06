@@ -32,11 +32,11 @@ export class Appointment extends BaseEntity {
   @Column()
   updated_at!: Date;
 
-  @ManyToOne(() => Client, (client) => client.appoiments)
+  @ManyToOne(() => Client, (client) => client.appointments)
   @JoinColumn({ name: "client_id" })
   client!: Client;
 
-  @ManyToOne(() => Artist, (Artist) => Artist.appoiments)
-  @JoinColumn({ name: "Artist_id" })
+  @ManyToOne(() => Artist, (artist) => artist.appointments)
+  @JoinColumn({ name: "artist_id" })
   artist!: Artist;
 }

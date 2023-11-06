@@ -142,7 +142,7 @@ const update = async (req: Request, res: Response) => {
 
 const getAllAppointmentByArtistId = async (req: Request, res: Response) => {
   try {
-    const appoimentId = req.params.id;
+    const appointmentId = req.params.id;
     const appointment = await Appointment.find({
       where: {
         artist_id: req.token.id,

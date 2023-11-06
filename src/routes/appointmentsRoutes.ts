@@ -3,7 +3,7 @@ import {
   create,
   updateAppointmentById,
   deleteAppointmentByUserId,
-} from "../controllers/appoimentsController";
+} from "../controllers/appointmentsController";
 import { auth } from "../middlewares/auth";
 
 const router = Router();
