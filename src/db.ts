@@ -8,6 +8,7 @@ import { CreateTableClients1698340010072 } from "./migration/1698340010072-creat
 import { CreateTableArtists1698391288374 } from "./migration/1698391288374-create-table-artists";
 import { CreateTableAppoiments1698391359737 } from "./migration/1698391359737-create-table-appoiments";
 import { CreateTablePortfolios1698392187453 } from "./migration/1698392187453-create-table-portfolios";
+require('dotenv').config();
 
 type database = "mysql";
 
