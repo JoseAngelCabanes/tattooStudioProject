@@ -1,36 +1,42 @@
-import { BaseEntity, Column, Entity, PrimaryGeneratedColumn, ManyToOne, JoinColumn } from "typeorm"
-import { Client } from "./Client"
-import { Artist } from "./Artist"
+import {
+  BaseEntity,
+  Column,
+  Entity,
+  PrimaryGeneratedColumn,
+  ManyToOne,
+  JoinColumn,
+} from "typeorm";
+import { Client } from "./Client";
+import { Artist } from "./Artist";
 
 @Entity("appointments")
 export class Appointment extends BaseEntity {
-
   @PrimaryGeneratedColumn()
-  id!: number
+  id!: number;
 
   @Column()
-  client_id!: number
+  client_id!: number;
 
   @Column()
-  artist_id!: number
+  artist_id!: number;
 
   @Column()
-  status!: boolean
+  status!: boolean;
 
   @Column()
-  date!: Date
-  
+  date!: Date;
+
   @Column()
-  created_at!: Date
-  
+  created_at!: Date;
+
   @Column()
-  updated_at!: Date
+  updated_at!: Date;
 
   @ManyToOne(() => Client, (client) => client.appoiments)
-  @JoinColumn({ name: "client_id"})
+  @JoinColumn({ name: "client_id" })
   client!: Client;
 
   @ManyToOne(() => Artist, (Artist) => Artist.appoiments)
-  @JoinColumn({ name: "Artist_id"})
+  @JoinColumn({ name: "Artist_id" })
   artist!: Artist;
 }
