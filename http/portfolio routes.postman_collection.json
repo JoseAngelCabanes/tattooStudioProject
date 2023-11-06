@@ -1,0 +1,161 @@
+{
+	"info": {
+		"_postman_id": "16a330cf-fe44-42ca-8aee-5dd7de379eb8",
+		"name": "portfolio routes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29941951"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/portfolio/update/2",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN1cGVyX2FkbWluIiwiZW1haWwiOiJhbGV4QGdtYWlsLmNvbSIsImlhdCI6MTY5OTA5NjI2NywiZXhwIjoxNjk5MTA3MDY3fQ.fwXKtJ2Bl6UibV_aRFCEz7iZTO6xdf3xGPhf_FlD4aQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"image\": \"update4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/portfolio/update/2",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"portfolio",
+						"update",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/portfolio/delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN1cGVyX2FkbWluIiwiZW1haWwiOiJhbGV4QGdtYWlsLmNvbSIsImlhdCI6MTY5OTA5NjI2NywiZXhwIjoxNjk5MTA3MDY3fQ.fwXKtJ2Bl6UibV_aRFCEz7iZTO6xdf3xGPhf_FlD4aQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/portfolio/delete",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"portfolio",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/portfolio/create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN1cGVyX2FkbWluIiwiZW1haWwiOiJhbGV4QGdtYWlsLmNvbSIsImlhdCI6MTY5OTA5NjI2NywiZXhwIjoxNjk5MTA3MDY3fQ.fwXKtJ2Bl6UibV_aRFCEz7iZTO6xdf3xGPhf_FlD4aQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"artist_id\": 1,\r\n    \"image\": \"sample\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/portfolio/create",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"portfolio",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost: 3000/portfolio/all",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN1cGVyX2FkbWluIiwiZW1haWwiOiJhbGV4QGdtYWlsLmNvbSIsImlhdCI6MTY5OTA5NjI2NywiZXhwIjoxNjk5MTA3MDY3fQ.fwXKtJ2Bl6UibV_aRFCEz7iZTO6xdf3xGPhf_FlD4aQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/portfolio/all",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"portfolio",
+						"all"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "1458550f-1889-4523-8d88-5204bc406bba",
+		"name": "clients routes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29941951"
+	},
+	"item": [
+		{
+			"name": "localhost: 3000/client/register",
+			"request": {
+				"auth": {
+					"type": "bearer"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Borja\",\r\n    \"surname\": \"Mon\",\r\n    \"email\": \"borJamon@gmail.com\",\r\n    \"password\": \"4321Jamon\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/client/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"client",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost: 3000/client/update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InVzZXIiLCJlbWFpbCI6ImFsZXhAZ21haWwuY29tIiwiaWF0IjoxNjk4NDAyOTY1LCJleHAiOjE2OTg0MTM3NjV9.AgvhQrK7qLvMpT_yGcm9PHtbeoCWR5Py9wfCMAqyoWk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Borja\",\r\n    \"surname\": \"Mon\",\r\n    \"email\": \"borJamon@gmail.com\",\r\n    \"password\": \"1234Jamon\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/client/update",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"client",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost: 3000/client/appointment/1",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InVzZXIiLCJlbWFpbCI6ImJvcmphQGdtYWlsLmNvbSIsImlhdCI6MTY5ODczOTk3NSwiZXhwIjoxNjk4NzUwNzc1fQ.8OZWuoCtYFVESS-NrAGrth0YoewRVK4OvNJN6J9u2F0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/client/appointment/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"client",
+						"appointment",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost: 3000/client/profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InVzZXIiLCJlbWFpbCI6ImFsZXhAZ21haWwuY29tIiwiaWF0IjoxNjk4NDAyOTY1LCJleHAiOjE2OTg0MTM3NjV9.AgvhQrK7qLvMpT_yGcm9PHtbeoCWR5Py9wfCMAqyoWk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/client/profile",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"client",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost: 3000/client/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"borJamon@gmail.com\",\r\n    \"password\": \"1234Jamon\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/client/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"client",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

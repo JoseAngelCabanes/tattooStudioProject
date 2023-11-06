@@ -1,0 +1,165 @@
+{
+	"info": {
+		"_postman_id": "6b892e16-c494-4c26-8b6e-0fdf6ec2a158",
+		"name": "superAdmin routes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29941951"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/artist/register",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN1cGVyX2FkbWluIiwiZW1haWwiOiJwYWJsb0BnbWFpbC5jb20iLCJpYXQiOjE2OTg2NTcxNjMsImV4cCI6MTY5ODY2Nzk2M30.789MTc2HpYuBPVvONmGdsEhrCmyU9PNqEQoIE9HUEAQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Jose\",\r\n    \"surname\": \"Cabanes\",\r\n    \"email\": \"JoseCabanes@gmail.com\",\r\n    \"password\": \"1234\"\r\n}\r\n\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/artist/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"artist",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/artist/update_admin_client",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN1cGVyX2FkbWluIiwiZW1haWwiOiJhbGV4QGdtYWlsLmNvbSIsImlhdCI6MTY5ODkyMzE4MSwiZXhwIjoxNjk4OTMzOTgxfQ.8xlTObO61mPCiTiCfPXGnvUY_nmjeJsyIwCH6IZRIWs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"is_active\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/artist/update_admin_client",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"artist",
+						"update_admin_client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/artist/client",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN1cGVyX2FkbWluIiwiZW1haWwiOiJhbGV4QGdtYWlsLmNvbSIsImlhdCI6MTY5ODkxNzAwMSwiZXhwIjoxNjk4OTI3ODAxfQ.I8gZiwGkaZ_kq1c2VeE-KxuGhA3ez0vcffDQxttvSmY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/artist/client",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"artist",
+						"client"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/artist/update_admin",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN1cGVyX2FkbWluIiwiZW1haWwiOiJhbGV4QGdtYWlsLmNvbSIsImlhdCI6MTY5ODkyMzE4MSwiZXhwIjoxNjk4OTMzOTgxfQ.8xlTObO61mPCiTiCfPXGnvUY_nmjeJsyIwCH6IZRIWs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"role\": \"admin\",\r\n    \"is_active\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/artist/update_admin",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"artist",
+						"update_admin"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "2bfe1437-87b2-4bcc-b39d-3a2abe10f9d2",
+		"name": "artist routes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29941951"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/artist/appointment/1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN1cGVyX2FkbWluIiwiZW1haWwiOiJhbGV4QGdtYWlsLmNvbSIsImlhdCI6MTY5ODc1MDgxNSwiZXhwIjoxNjk4NzYxNjE1fQ.ayic6ZXWKp7TxSmoEMKpjw9ZfqKdl4NDk3SEx7OQcus",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/artist/appointment/1",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"artist",
+						"appointment",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/artist/all",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InVzZXIiLCJlbWFpbCI6ImJvcmphQGdtYWlsLmNvbSIsImlhdCI6MTY5ODkxMzg1OCwiZXhwIjoxNjk4OTI0NjU4fQ.o8ivB7FncqAuhcvvct7i9DZFBqmzG-YUeWH45WEjDkQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/artist/all",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"artist",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/artist/update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6ImFkbWluIiwiZW1haWwiOiJnYXN0b25AZ21haWwuY29tIiwiaWF0IjoxNjk4NjU4NDE5LCJleHAiOjE2OTg2NjkyMTl9.xVwiTq16kxMi_TKIGsQOFinr6hXQwpuzPuzzNbtUIEk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Jose\",\r\n    \"surname\": \"Cabanes\",\r\n    \"email\": \"JoseCabanes@gmail.com\",\r\n    \"password\": \"1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/artist/update",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"artist",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/artist/login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InVzZXIiLCJlbWFpbCI6ImFsZXhAZ21haWwuY29tIiwiaWF0IjoxNjk4NDAyOTY1LCJleHAiOjE2OTg0MTM3NjV9.AgvhQrK7qLvMpT_yGcm9PHtbeoCWR5Py9wfCMAqyoWk",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"jose@gmail.com\",\r\n    \"password\": \"GarciaVaquero\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/artist/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"artist",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/artist/profile",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6InN1cGVyX2FkbWluIiwiZW1haWwiOiJwYWJsb0BnbWFpbC5jb20iLCJpYXQiOjE2OTg2NTcxNjMsImV4cCI6MTY5ODY2Nzk2M30.789MTc2HpYuBPVvONmGdsEhrCmyU9PNqEQoIE9HUEAQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/artist/profile",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"artist",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
