@@ -4,7 +4,7 @@ import { Appointment } from "../models/Appointment";
 const create = async (req: Request, res:Response, next: NextFunction) => {
     try{
         const client_id = req.body.client_id
-        const artist_id = req.body.tattoo_artist_id
+        const artist_id = req.body.artist_id
         const date = req.body.date;
 
         const newClient = await Appointment.create({
@@ -15,14 +15,14 @@ const create = async (req: Request, res:Response, next: NextFunction) => {
 
           return res.json({
             success: true,
-            message: "Appoiment created succesfully",
+            message: "Appointment created succesfully",
             token: newClient
           })
     }catch (error) {
         return res.status(500).json(
             {
                 success: false,
-                message: "Appoiment cant be created",
+                message: "Appointment cant be created",
                 error: error
             }
         )
@@ -31,15 +31,15 @@ const create = async (req: Request, res:Response, next: NextFunction) => {
 
 const updateAppointmentById = async(req: any, res: Response) => {
     try {
-      const tattoo_artist_id = req.body.tattoo_artist_id
+      const artist_id = req.body.artist_id
       const status = req.body.status
       const date = req.body.date
     
-      const appoimentId = req.params.id
+      const appointmentId = req.params.id
   
       const appointment = await Appointment.findOneBy(
         {
-          id: parseInt(appoimentId),
+          id: parseInt(appointmentId),
           client_id: req.token.id
         }
       )
@@ -47,13 +47,13 @@ const updateAppointmentById = async(req: any, res: Response) => {
       if (!appointment) {
         return res.status(404).json({
           success: true,
-          message: "appointment by user doesnt found and cant updated",
+          message: "appointment couldn't be updated",
         })
       }
   
       const updateAppointment = await Appointment.update(
         {
-          id: parseInt(appoimentId)
+          id: parseInt(appointmentId)
         },
         {
           artist_id: artist_id,
@@ -70,7 +70,7 @@ const updateAppointmentById = async(req: any, res: Response) => {
     } catch (error) {
       return res.json({
         success: false,
-        message: "Appointment cant by updated",
+        message: "Appointment can not by updated",
         error: error
       })
     }

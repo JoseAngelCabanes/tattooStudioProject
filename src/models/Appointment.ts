@@ -1,6 +1,6 @@
 import { BaseEntity, Column, Entity, PrimaryGeneratedColumn, ManyToOne, JoinColumn } from "typeorm"
-import { Customer } from "./Customer"
-import { Tattoo_artist } from "./Tattoo_artist"
+import { Client } from "./Client"
+import { Artist } from "./Artist"
 
 @Entity("appointments")
 export class Appointment extends BaseEntity {
@@ -9,10 +9,10 @@ export class Appointment extends BaseEntity {
   id!: number
 
   @Column()
-  customer_id!: number
+  client_id!: number
 
   @Column()
-  tattoo_artist_id!: number
+  artist_id!: number
 
   @Column()
   status!: boolean
@@ -26,11 +26,11 @@ export class Appointment extends BaseEntity {
   @Column()
   updated_at!: Date
 
-  @ManyToOne(() => Customer, (customer) => customer.appoiments)
-  @JoinColumn({ name: "customer_id"})
-  customer!: Customer;
+  @ManyToOne(() => Client, (client) => client.appoiments)
+  @JoinColumn({ name: "client_id"})
+  client!: Client;
 
-  @ManyToOne(() => Tattoo_artist, (tattoo_artist) => tattoo_artist.appoiments)
-  @JoinColumn({ name: "tattoo_artist_id"})
-  tattoo_artist!: Tattoo_artist;
+  @ManyToOne(() => Artist, (Artist) => Artist.appoiments)
+  @JoinColumn({ name: "Artist_id"})
+  artist!: Artist;
 }
