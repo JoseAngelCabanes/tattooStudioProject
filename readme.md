@@ -37,11 +37,8 @@ Make sure to handle the error cases and validation properly.
 <a href="https://www.expressjs.com/">
     <img src= "https://img.shields.io/badge/Express.js-404D59?style=for-the-badge"/>
 </a>
-  <a href="https://www.postman.com/">
-    <img src="https://cdn.worldvectorlogo.com/logos/postman.svg" width="60"/>
   <a href="https://git-scm.com/">
     <img width="10%" src="https://www.vectorlogo.zone/logos/git-scm/git-scm-ar21.svg"/>
-</a>
 </a>
 </div>
 
