@@ -20,7 +20,7 @@ export class CreateTablePortfolios1698392187453 implements MigrationInterface {
           {
             name: "image",
             type: "varchar",
-            length: "255",
+            length: "250",
           },
           {
             name: "created_at",

@@ -18,8 +18,7 @@ const register = async (req: Request, res: Response) => {
       return res.json({ mensaje: "The email entered is not valid" });
     }
 
-    const passswordRegex =
-      /^(?=.*[A-Z])(?=.*[!@#$%^&*])[A-Za-z!@#$%^&*]{4,12}$/;
+    const passswordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{4,15}$/;
     if (!passswordRegex.test(password)) {
       return res.json({ mensaje: "Invalid password" });
     }
