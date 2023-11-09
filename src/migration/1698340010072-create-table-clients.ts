@@ -21,12 +21,12 @@ export class CreateTableClients1698340010072 implements MigrationInterface {
           {
             name: "surname",
             type: "varchar",
-            length: "40",
+            length: "20",
           },
           {
             name: "email",
             type: "varchar",
-            length: "50",
+            length: "30",
             isUnique: true,
           },
           {
