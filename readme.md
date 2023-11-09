@@ -2,6 +2,9 @@
 
 This project is a backend application developed using TypeScript and MySQL. It provides a simple API for managing users, allowing for the creation, updating, deletion, and retrieval of user information.
 
+## Database diagram
+![tattoo studio reverse engineer](./src/assets/reverseengineer.png)
+
 ## Installation
 
 To get started with the project, follow these steps:
