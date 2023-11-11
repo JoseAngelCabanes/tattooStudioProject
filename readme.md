@@ -37,6 +37,9 @@ Make sure to handle the error cases and validation properly.
 <a href="https://www.mysql.com/">
     <img src= "https://img.shields.io/badge/MySQL-00000F?style=for-the-badge&logo=mysql&logoColor=white"/>
 </a>
+<a href="https://typeorm.io/">
+    <img src= "https://img.shields.io/badge/TypeORM-376ECC?style=for-the-badge&logo=typeorm&logoColor=white"/>
+</a>
 <a href="https://www.expressjs.com/">
     <img src= "https://img.shields.io/badge/Express.js-404D59?style=for-the-badge"/>
 </a>
