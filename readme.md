@@ -264,6 +264,9 @@ npm test
     }
     ```
   Permite eliminar una imagen de la galería.
+
+- **SEEDER** (Script that creates examples to fill the database, INSTALL npm install --save-dev ts-node (if not installed before))
+  - `npm run seed`
 </details>
 
 
