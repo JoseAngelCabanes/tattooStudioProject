@@ -23,7 +23,7 @@ router.get("/profile", auth, admin, profile);
 router.put("/update", auth, admin, update);
 router.get("/appointment/:id", auth, admin, getAllAppointmentByArtistId);
 router.get("/all", auth, getAllArtist);
-router.get("/clients", auth, isSuperAdmin, getAllClients);
+router.get("/clients", auth, admin, getAllClients);
 router.put("/update_admin", auth, isSuperAdmin, updateAdmin);
 router.put("/update_admin_client", auth, isSuperAdmin, updateAdminClients);
 router.get('/appointment', auth, admin, getAllAppointment)

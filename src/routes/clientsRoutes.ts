@@ -18,6 +18,6 @@ router.get("/profile", auth, profile);
 
 router.put("/update", auth, update);
 
-router.get("/appointment/:id", auth, getAllAppointmentByClientId);
+router.get("/appointment", auth, getAllAppointmentByClientId);
 
 export { router };
