@@ -9,6 +9,7 @@ import {
   getAllClients,
   updateAdmin,
   updateAdminClients,
+  getAllAppointment,
 } from "../controllers/artistsController";
 import { auth } from "../middlewares/auth";
 import { isSuperAdmin } from "../middlewares/isSuperAdmin";
@@ -25,5 +26,6 @@ router.get("/all", auth, getAllArtist);
 router.get("/clients", auth, isSuperAdmin, getAllClients);
 router.put("/update_admin", auth, isSuperAdmin, updateAdmin);
 router.put("/update_admin_client", auth, isSuperAdmin, updateAdminClients);
+router.get('/appointment', auth, admin, getAllAppointment)
 
 export { router };

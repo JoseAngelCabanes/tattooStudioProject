@@ -13,6 +13,6 @@ const router = Router();
 router.post("/create", auth, admin, createImage);
 router.post("/update/:id", auth, admin, updateImageById);
 router.delete("/delete", auth, admin, deleteImageByArtistId);
-router.get("/all", auth, getAllPortfolio);
+router.get("/all", getAllPortfolio);
 
 export { router };

@@ -285,14 +285,47 @@ const updateAdminClients = async (req: Request, res: Response) => {
   }
 };
 
-export {
-  register,
-  login,
-  profile,
-  update,
-  getAllAppointmentByArtistId,
-  getAllArtist,
-  getAllClients,
-  updateAdmin,
-  updateAdminClients,
-};
+const getAllAppointment = async(req: Request, res: Response) => {
+  try {
+    const appoimentId = req.params.id
+    const appointment = await Appointment.find(
+      {
+        select: {
+          id: true,
+          client_id: true,
+          status: true,
+          date: true,
+          client: {
+            name: true,
+            surname: true,
+            email: true,
+            password: false
+          },
+          artist:{
+            name: true,
+            surname: true,
+            email:true
+          }
+        },
+        relations: {
+          client: true,
+          artist: true
+        },
+      }
+    )
+
+    return res.json({
+      success: true,
+      message: "appointments by tattoo artist retrieved",
+      data: appointment
+    })
+  } catch (error) {
+    return res.json({
+      success: false,
+      message: "appointments cant by tattoo artist retrieved",
+      error: error
+    })
+  }
+}
+
+export { register, login, profile, update, getAllAppointmentByArtistId, getAllArtist, getAllClients, updateAdmin, updateAdminClients, getAllAppointment }
